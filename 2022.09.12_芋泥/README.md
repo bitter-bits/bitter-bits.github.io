@@ -23,3 +23,12 @@ FOR i = 0 TO xml.size - 1
     IF insideTag: tokenBuf.append(xml[i])   // append current char to the string buffer
 return stack.isEmpty()                      // the stack should be empty finally
 ```
+
+```java=
+foreach token t in xml
+    IF t = start_tag
+        stack.push(t)
+
+    IF t = end_tag AND '/' + stack.pop() != t
+        return false
+```
