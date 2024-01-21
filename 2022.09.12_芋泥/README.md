@@ -25,10 +25,14 @@ return stack.isEmpty()                      // the stack should be empty finally
 ```
 
 ```java=
-foreach token t in xml
-    IF t = start_tag
+foreach token t in XML
+    IF t = start_tag            // Push the current XML tag 't' onto the stack
         stack.push(t)
 
-    IF t = end_tag AND '/' + stack.pop() != t
-        return false
+    IF t = end_tag
+        t2 = '/' + stack.pop()
+        IF t2 != t              // Verify whether the current XML tag 't' matches the previous tag
+            return false
+
+return stack.isEmpty()          // Ensure that the stack is empty by the end
 ```
