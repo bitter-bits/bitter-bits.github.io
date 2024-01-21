@@ -36,5 +36,5 @@ foreach char c in XML string
                 return false
     ELSE
         tokenBuf.append(c)
-return stack.isEmpty()  // Ensure that the stack is empty by the end
+return stack.isEmpty()      // Ensure that the stack is empty by the end
 ```
