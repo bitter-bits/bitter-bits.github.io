@@ -24,15 +24,17 @@ FOR i = 0 TO xml.size - 1
 return stack.isEmpty()                      // the stack should be empty finally
 ```
 
-```java=
-foreach token t in XML
-    IF t = start_tag    // Push the current XML tag 't' onto the stack
-        stack.push(t)
+```text
+foreach char c in XML string
+    IF isTag
+        IF t = start_tag    // Push the current XML tag 't' onto the stack
+            stack.push(t)
 
-    IF t = end_tag      // Verify whether the current XML tag 't' matches the previous tag
-        t2 = '/' + stack.pop()
-        IF t2 != t
-            return false
-
+        IF t = end_tag      // Verify whether the current XML tag 't' matches the previous tag
+            t2 = '/' + stack.pop()
+            IF t2 != t
+                return false
+    ELSE
+        tokenBuf.append(c)
 return stack.isEmpty()  // Ensure that the stack is empty by the end
 ```
