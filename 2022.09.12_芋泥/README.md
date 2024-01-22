@@ -17,7 +17,9 @@ return stack.isEmpty()  // Ensure that the stack is empty by the end
 
 ```console
 $ dotnet test
+```
 
+```
  SimpleXmlValidatorLibrary -> SimpleXmlValidatorLibrary.dll
  SimpleXMLValidatorLibrary.Tests -> SimpleXMLValidatorLibrary.Tests.dll
 
