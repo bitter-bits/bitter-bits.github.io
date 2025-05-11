@@ -6,16 +6,17 @@
   <title>International Student Scenario</title>
   <style>
     :root {
-      --main-bg: #CAC6BD;
-      --accent1: #979D6E;
-      --accent2: #B5A8A0;
-      --accent3: #BB9A88;
+      --color-bg: #CAC6BD;
+      --color-accent1: #979D6E;
+      --color-accent2: #B5A8A0;
+      --color-accent3: #BB9A88;
+      --color-white: #ffffff;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--main-bg);
+      background: var(--color-bg);
       color: #333;
       padding: 2rem;
     }
@@ -24,19 +25,20 @@
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 0.5rem;
+      color: var(--color-accent1);
     }
 
     h2 {
       text-align: center;
       font-weight: normal;
-      color: #444;
+      color: var(--color-accent2);
       margin-bottom: 2rem;
     }
 
     .section {
       max-width: 700px;
       margin: 2rem auto;
-      background: white;
+      background: var(--color-white);
       padding: 2rem;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -45,12 +47,12 @@
     .section h3 {
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
-      color: var(--accent1);
+      color: var(--color-accent1);
     }
 
     .button-link {
       display: block;
-      background-color: var(--accent3);
+      background-color: var(--color-accent3);
       color: white;
       text-decoration: none;
       font-size: 1.1rem;
@@ -62,7 +64,7 @@
     }
 
     .button-link:hover {
-      background-color: var(--accent2);
+      background-color: var(--color-accent2);
       transform: translateY(-2px);
     }
 
