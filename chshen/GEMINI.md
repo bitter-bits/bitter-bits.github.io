@@ -1,0 +1,13 @@
+## Git Commit Message Rules
+- **Subject Line**:
+  - Must not exceed 50 characters.
+  - Must be capitalized and written in imperative mood (e.g., "Fix bug," not "Fixed bug" or "Fixes bug").
+  - Must not end with a period.
+- **Body Copy** (optional):
+  - Must be separated from the subject line by a blank line.
+  - Each line in the message body must not exceed 72 characters.
+  - Must explain "what" and "why," not "how" (implementation details belong in documentation).
+- **Environment**:
+  - Windows 10 development environment.
+  - Use temporary commit message file `.gitmessage`.
+  - Remove `.gitmessage` file after committing.
