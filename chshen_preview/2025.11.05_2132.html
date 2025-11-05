@@ -150,21 +150,24 @@
             "國別": "中華民國",
             "科系所": "物理研究所",
             "學位": "博士",
-            "起訖年月": "2002/09 - 2006/11"
+            "起訖年月": "2002/09 - 2006/11",
+            "logo": "image/school/nthu_logo.png"
           },
           {
             "畢業學校": "國立清華大學",
             "國別": "中華民國",
             "科系所": "物理研究所",
             "學位": "碩士",
-            "起訖年月": "2000/09 - 2002/09"
+            "起訖年月": "2000/09 - 2002/09",
+            "logo": "image/school/nthu_logo.png"
           },
           {
             "畢業學校": "國立中山大學",
             "國別": "中華民國",
             "科系所": "物理系",
             "學位": "學士",
-            "起訖年月": "1996/06 - 2000/09"
+            "起訖年月": "1996/06 - 2000/09",
+            "logo": "image/school/nsysu_physics.png"
           }
         ],
         "經歷": [
@@ -553,15 +556,20 @@
     function renderEducation(edu) {
         document.getElementById('education-section').innerHTML = `
             ${createCardTitle('主要學歷')}
-            <ul class="space-y-5">
-                ${edu.map(item => `
+            <div class="flex flex-col space-y-5">
+              ${edu.map(item => `
+                <div class="flex items-center space-x-4">
+                  <ul class="flex-1">
                     <li class="border-l-4 border-blue-500 dark:border-blue-400 pl-4 py-1">
-                        <p class="font-bold text-base text-gray-900 dark:text-gray-100">${item.畢業學校}</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">${item.科系所} - ${item.學位}</p>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">${item.起訖年月}</p>
+                      <p class="font-bold text-base text-gray-900 dark:text-gray-100">${item.畢業學校}</p>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">${item.科系所} - ${item.學位}</p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">${item.起訖年月}</p>
                     </li>
-                `).join('')}
-            </ul>
+                  </ul>
+                  <img src="${item.logo}" class="h-24 object-contain" alt="學歷圖片" />
+                </div>
+              `).join('')}
+            </div>
         `;
     }
 
