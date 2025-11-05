@@ -81,7 +81,7 @@
 
         <div class="md:col-span-1 space-y-6">
         <div class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800 flex flex-col items-center">
-            <img src="image/head.jpg"
+            <img src="image/head_ghibli.png"
                  alt="沈昌宏教授"
                  class="w-52 h-60 rounded-2xl object-cover border-4 border-blue-200 dark:border-blue-700 shadow-md mb-4">
             <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">沈昌宏 教授</h3>
@@ -98,9 +98,10 @@
             <div id="research-section" class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800"></div>
             <div id="innovation-section" class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800"></div>
             <div id="industry-section" class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800"></div>
-            <!-- 新增論文區塊容器 -->
+
             <div id="journal-2025-section" class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800"></div>
             <div id="conference-2025-section" class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800"></div>
+            <div id="patent-section" class="p-6 bg-white rounded-xl shadow-lg dark:bg-gray-800"></div>
         </div>
     </main>
 </div>
@@ -131,347 +132,371 @@
 
 <script type="module">
     const professorData = {
-      "教授": {
-        "姓名": "沈昌宏",
-        "基本資訊": {
-          "職稱": "國立清華大學 半導體研究學院 專任教授",
-          "聯絡電話": "03-5715131 分機 35927",
-          "辦公室": "國立清華大學第三綜合大樓四樓C13室",
-          "E-Mail": "chshen@mx.nthu.edu.tw",
-          "研究與技術專長": [
-            "二維材料電晶體技術",
-            "化合物半導體磊晶及元件技術",
-            "積層型三維積體電路技術"
-          ]
-        },
-        "主要學歷": [
-          {
-            "畢業學校": "國立清華大學",
-            "國別": "中華民國",
-            "科系所": "物理研究所",
-            "學位": "博士",
-            "起訖年月": "2002/09 - 2006/11",
-            "logo": "image/school/nthu_logo.png"
-          },
-          {
-            "畢業學校": "國立清華大學",
-            "國別": "中華民國",
-            "科系所": "物理研究所",
-            "學位": "碩士",
-            "起訖年月": "2000/09 - 2002/09",
-            "logo": "image/school/nthu_logo.png"
-          },
-          {
-            "畢業學校": "國立中山大學",
-            "國別": "中華民國",
-            "科系所": "物理系",
-            "學位": "學士",
-            "起訖年月": "1996/06 - 2000/09",
-            "logo": "image/school/nsysu_physics.png"
-          }
-        ],
-        "經歷": [
-          {
-            "服務機關": "清華大學",
-            "部門": "半導體研究學院",
-            "職稱": "教授",
-            "起訖年月": "2025/01 - 至今"
-          },
-          {
-            "服務機關": "台灣半導體研究中心",
-            "部門": "主任室",
-            "職稱": "副主任",
-            "起訖年月": "2022/02 - 2025/01"
-          },
-          {
-            "服務機關": "台灣半導體研究中心",
-            "部門": "企劃推廣組",
-            "職稱": "研究員兼組長",
-            "起訖年月": "2019/01 - 2022/01"
-          },
-          {
-            "服務機關": "國家奈米元件實驗室",
-            "部門": "企劃推廣組",
-            "職稱": "研究員兼組長",
-            "起訖年月": "2018/09 - 2018/12"
-          },
-          {
-            "服務機關": "國家奈米元件實驗室",
-            "部門": "前瞻元件組",
-            "職稱": "研究員兼組長",
-            "起訖年月": "2014/08 - 2018/08"
-          },
-          {
-            "服務機關": "國家奈米元件實驗室",
-            "部門": "前瞻元件組",
-            "職稱": "研究員兼副組長",
-            "起訖年月": "2014/01 - 2014/07"
-          },
-          {
-            "服務機關": "國家奈米元件實驗室",
-            "部門": "前瞻元件組",
-            "職稱": "研究員",
-            "起訖年月": "2014/01 起"
-          },
-          {
-            "服務機關": "國家奈米元件實驗室",
-            "部門": "前瞻元件組;奈米能源與光電元件組",
-            "職稱": "副研究員兼副組長",
-            "起訖年月": "2013/01 - 2013/12"
-          },
-          {
-            "服務機關": "國家奈米元件實驗室",
-            "部門": "奈米能源與光電元件組",
-            "職稱": "副研究員",
-            "起訖年月": "2009/01 - 2013/12"
-          }
-        ],
-        "個人簡介": {
-          "description": "沈昌宏教授。曾任職於茂矽電子公司、台灣半導體研究中心及國家奈米元件實驗室，參與並領導多項尖端半導體技術開發計畫。研究專長包括單晶片式三維積體電路、先進矽與二維材料電晶體、高功率 GaN 技術等，並曾主持「晶創台灣」等國家級大型專案，具備卓越的團隊經營與科技政策推動經驗。已發表國際期刊論文超過 60 篇，國際會議期刊超過 30 篇，專利超過 10 件。"
-        },
-        "研究領域": [
-          {
-            "name": "Flexible Si/Ge electronics",
-            "link": "https://en.wikipedia.org/wiki/Flexible_electronics"
-          },
-          {
-            "name": "2D materials-based FET",
-            "link": "https://en.wikipedia.org/wiki/Field-effect_transistor#2D_materials"
-          },
-          {
-            "name": "GaN high frequency/power devices",
-            "link": "https://en.wikipedia.org/wiki/Gallium_nitride#Applications"
-          },
-          {
-            "name": "Monolithic 3D ICs",
-            "link": "https://en.wikipedia.org/wiki/3D_integrated_circuit#Monolithic_3D_ICs"
-          }
-        ],
-        "主要獲獎與榮譽": [
-          "2010、2013、2014、2020 國家實驗研究院傑出科技貢獻獎",
-          "2010 CLEO 大會邀請演講",
-          "2013 IEDM 精選宣傳論文",
-          "2015 IEDM Highlight 論文",
-          "IEDM 2018, 2019 Committee & Section Chair",
-          "2020 Symposium on VLSI Technology: Short Course 講師",
-          "IEDMS2020 邀請講者與主持人"
-        ],
-        "代表性技術創新與突破": [
-          {
-            "title": "單晶片式三維積體電路 (Monolithic 3DIC)",
-            "details": [
-              "為延續摩爾定律之關鍵技術,突破傳統 TSV 限制",
-              "全世界最低製程溫度(< 400°C)與最高整合密度",
-              "IEDM 2015-2019 發表數最多團隊(共 9 篇,4 篇通訊作者)",
-              "可實現記憶體內運算(Computing-in-Memory)技術"
-            ]
-          },
-          {
-            "title": "二維材料電晶體技術於單晶片式 3DIC",
-            "details": [
-              "研發異質整合製程、雙層邏輯閘設計及 SRAM",
-              "開發超低熱預算金屬導線 (<200°C) 製程"
-            ]
-          },
-          {
-            "title": "高頻/高功率 GaN 元件技術",
-            "details": [
-              "用於 5G/6G 通訊,推動 GaN/SiC 異質磊晶",
-              "開發次太赫茲 Sub-THz MMIC 功率放大器 (fmax > 600 GHz)"
-            ]
-          },
-          {
-            "title": "第三代薄膜太陽能電池",
-            "details": [
-              "包含 Si 薄膜、無鎘 CIGS 太陽能電池、高效異質結構太陽能電池",
-              "發表於 IEDM、CLEO、APL,取得多項專利"
-            ]
-          }
-        ],
-        "近五年協助產業發展績效": {
-          "整體貢獻面向": [
-            "技術移轉",
-            "著作授權",
-            "產學合作",
-            "協助產業發展",
-            "實作研究上之成果與貢獻",
-            "產業規範/標準之建立",
-            "國防與太空科技之研究與貢獻"
-          ],
-          "具體計畫與成果": [
-            {
-              "title": "台積電先進元件製程合作計畫",
-              "合作對象": "台積電 CR and path finding 團隊",
-              "技術內容": [
-                "先進電晶體技術開發",
-                "記憶體元件技術開發"
-              ],
-              "TSRI角色": [
-                "提供製程平台協助 TSMC 研發",
-                "直接參與技術研發"
-              ],
-              "成果": [
-                "協助開發具量產價值之次世代半導體技術"
-              ],
-              "經費來源與規模": "台積電提供經費約 9,000 萬元(近三年)"
+        "教授": {
+            "姓名": "沈昌宏",
+            "基本資訊": {
+                "職稱": "國立清華大學 半導體研究學院 專任教授",
+                "聯絡電話": "03-5715131 分機 35927",
+                "辦公室": "國立清華大學第三綜合大樓四樓C13室",
+                "E-Mail": "chshen@mx.nthu.edu.tw",
+                "研究與技術專長": [
+                    "二維材料電晶體技術",
+                    "化合物半導體磊晶及元件技術",
+                    "積層型三維積體電路技術"
+                ]
             },
-            {
-              "title": "低成本高效率矽基薄膜太陽能電池",
-              "技術突破": [
-                "首創高密度電漿製作高效率非晶矽太陽能電池",
-                "單接面非晶矽效率達 9.6%,具世界級水準"
-              ],
-              "延伸應用與合作": [
+            "主要學歷": [
                 {
-                  "合作對象": "Monolithic Semiconductor Inc.",
-                  "內容": "合作開發可拉伸式矽晶太陽能電池",
-                  "經費補助": "440 萬元"
+                    "畢業學校": "國立清華大學",
+                    "國別": "中華民國",
+                    "科系所": "物理研究所",
+                    "學位": "博士",
+                    "起訖年月": "2002/09 - 2006/11",
+                    "logo": "image/school/nthu_logo.png"
                 },
                 {
-                  "合作對象": "科冠能源科技股份有限公司",
-                  "內容": "合作開發矽碳太陽能電池",
-                  "經費補助": "100 萬元"
+                    "畢業學校": "國立清華大學",
+                    "國別": "中華民國",
+                    "科系所": "物理研究所",
+                    "學位": "碩士",
+                    "起訖年月": "2000/09 - 2002/09",
+                    "logo": "image/school/nthu_logo.png"
                 },
                 {
-                  "合作對象": "勝連公司",
-                  "內容": "合作開發 X 光感測器 PIN 元件",
-                  "經費補助": "100 萬元"
-                },
-                {
-                  "合作對象": "茂迪公司",
-                  "內容": "合作開發大尺寸超薄異質結構矽晶太陽能電池",
-                  "經費補助": "150 萬元"
+                    "畢業學校": "國立中山大學",
+                    "國別": "中華民國",
+                    "科系所": "物理系",
+                    "學位": "學士",
+                    "起訖年月": "1996/06 - 2000/09",
+                    "logo": "image/school/nsysu_physics.png"
                 }
-              ],
-              "總經費": "合計 790 萬元"
-            },
-            {
-              "title": "無毒無鎘綠色環保 CIGS 薄膜太陽能電池",
-              "核心技術": [
-                "無毒無鎘 CIGS 薄膜太陽能電池",
-                "綠色環保、低毒性製程"
-              ],
-              "合作項目與夥伴": [
+            ],
+            "經歷": [
                 {
-                  "合作對象": "勝連光電",
-                  "內容": "CIGS 相關技術產學合作",
-                  "年度經費": "180 萬元"
+                    "服務機關": "清華大學",
+                    "部門": "半導體研究學院",
+                    "職稱": "教授",
+                    "起訖年月": "2025/01 - 至今"
                 },
                 {
-                  "合作對象": "設備商純化、矽碳",
-                  "內容": "共同研發大面積無毒 CuInSe₂ 太陽能電池"
+                    "服務機關": "台灣半導體研究中心",
+                    "部門": "主任室",
+                    "職稱": "副主任",
+                    "起訖年月": "2022/02 - 2025/01"
+                },
+                {
+                    "服務機關": "台灣半導體研究中心",
+                    "部門": "企劃推廣組",
+                    "職稱": "研究員兼組長",
+                    "起訖年月": "2019/01 - 2022/01"
+                },
+                {
+                    "服務機關": "國家奈米元件實驗室",
+                    "部門": "企劃推廣組",
+                    "職稱": "研究員兼組長",
+                    "起訖年月": "2018/09 - 2018/12"
+                },
+                {
+                    "服務機關": "國家奈米元件實驗室",
+                    "部門": "前瞻元件組",
+                    "職稱": "研究員兼組長",
+                    "起訖年月": "2014/08 - 2018/08"
+                },
+                {
+                    "服務機關": "國家奈米元件實驗室",
+                    "部門": "前瞻元件組",
+                    "職稱": "研究員兼副組長",
+                    "起訖年月": "2014/01 - 2014/07"
+                },
+                {
+                    "服務機關": "國家奈米元件實驗室",
+                    "部門": "前瞻元件組",
+                    "職稱": "研究員",
+                    "起訖年月": "2014/01 起"
+                },
+                {
+                    "服務機關": "國家奈米元件實驗室",
+                    "部門": "前瞻元件組;奈米能源與光電元件組",
+                    "職稱": "副研究員兼副組長",
+                    "起訖年月": "2013/01 - 2013/12"
+                },
+                {
+                    "服務機關": "國家奈米元件實驗室",
+                    "部門": "奈米能源與光電元件組",
+                    "職稱": "副研究員",
+                    "起訖年月": "2009/01 - 2013/12"
                 }
-              ]
-            }
-          ]
-        },
-        "期刊論文2025": [
-            {
-                "authors": "Lo, C-H, Chang, Y-C, ... ,",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ". ",
-                "title": "Enhanced crystallinity of p-type 2D tellurium thin films by pulsed laser annealing process and its applications on high-performance photodetectors and high-sensitivity gas sensors",
-                "journal": "Advanced Functional Materials",
-                "year": "2025",
-                "volume": "?",
-                "number": "?",
-                "pages": "?",
-                "doi": "10.1002/adfm.202516546",
-                "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202516546"
+            ],
+            "個人簡介": {
+                "description": "沈昌宏教授。曾任職於茂矽電子公司、台灣半導體研究中心及國家奈米元件實驗室，參與並領導多項尖端半導體技術開發計畫。研究專長包括單晶片式三維積體電路、先進矽與二維材料電晶體、高功率 GaN 技術等，並曾主持「晶創台灣」等國家級大型專案，具備卓越的團隊經營與科技政策推動經驗。已發表國際期刊論文超過 60 篇，國際會議期刊超過 30 篇，專利超過 10 件。"
             },
-            {
-                "authors": "Lin, C-Y, Chen, B-C, Liu, Y-C, ... ,",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", ... . ",
-                "title": "Integration of freestanding hafnium zirconium oxide membranes into two-dimensional transistors as a high-κ ferroelectric dielectric",
-                "journal": "Nature Electronics",
-                "year": "2025",
-                "volume": "8",
-                "number": "7",
-                "pages": "560-570",
-                "doi": "10.1038/s41928-025-01398-y",
-                "url": "https://www.nature.com/articles/s41928-025-01398-y"
+            "研究領域": [
+                {
+                    "name": "Flexible Si/Ge electronics",
+                    "link": "https://en.wikipedia.org/wiki/Flexible_electronics"
+                },
+                {
+                    "name": "2D materials-based FET",
+                    "link": "https://en.wikipedia.org/wiki/Field-effect_transistor#2D_materials"
+                },
+                {
+                    "name": "GaN high frequency/power devices",
+                    "link": "https://en.wikipedia.org/wiki/Gallium_nitride#Applications"
+                },
+                {
+                    "name": "Monolithic 3D ICs",
+                    "link": "https://en.wikipedia.org/wiki/3D_integrated_circuit#Monolithic_3D_ICs"
+                }
+            ],
+            "主要獲獎與榮譽": [
+                "2010、2013、2014、2020 國家實驗研究院傑出科技貢獻獎",
+                "2010 CLEO 大會邀請演講",
+                "2013 IEDM 精選宣傳論文",
+                "2015 IEDM Highlight 論文",
+                "IEDM 2018, 2019 Committee & Section Chair",
+                "2020 Symposium on VLSI Technology: Short Course 講師",
+                "IEDMS2020 邀請講者與主持人"
+            ],
+            "代表性技術創新與突破": [
+                {
+                    "title": "單晶片式三維積體電路 (Monolithic 3DIC)",
+                    "details": [
+                        "為延續摩爾定律之關鍵技術,突破傳統 TSV 限制",
+                        "全世界最低製程溫度(< 400°C)與最高整合密度",
+                        "IEDM 2015-2019 發表數最多團隊(共 9 篇,4 篇通訊作者)",
+                        "可實現記憶體內運算(Computing-in-Memory)技術"
+                    ]
+                },
+                {
+                    "title": "二維材料電晶體技術於單晶片式 3DIC",
+                    "details": [
+                        "研發異質整合製程、雙層邏輯閘設計及 SRAM",
+                        "開發超低熱預算金屬導線 (<200°C) 製程"
+                    ]
+                },
+                {
+                    "title": "高頻/高功率 GaN 元件技術",
+                    "details": [
+                        "用於 5G/6G 通訊,推動 GaN/SiC 異質磊晶",
+                        "開發次太赫茲 Sub-THz MMIC 功率放大器 (fmax > 600 GHz)"
+                    ]
+                },
+                {
+                    "title": "第三代薄膜太陽能電池",
+                    "details": [
+                        "包含 Si 薄膜、無鎘 CIGS 太陽能電池、高效異質結構太陽能電池",
+                        "發表於 IEDM、CLEO、APL,取得多項專利"
+                    ]
+                }
+            ],
+            "近五年協助產業發展績效": {
+                "整體貢獻面向": [
+                    "技術移轉",
+                    "著作授權",
+                    "產學合作",
+                    "協助產業發展",
+                    "實作研究上之成果與貢獻",
+                    "產業規範/標準之建立",
+                    "國防與太空科技之研究與貢獻"
+                ],
+                "具體計畫與成果": [
+                    {
+                        "title": "台積電先進元件製程合作計畫",
+                        "合作對象": "台積電 CR and path finding 團隊",
+                        "技術內容": [
+                            "先進電晶體技術開發",
+                            "記憶體元件技術開發"
+                        ],
+                        "TSRI角色": [
+                            "提供製程平台協助 TSMC 研發",
+                            "直接參與技術研發"
+                        ],
+                        "成果": [
+                            "協助開發具量產價值之次世代半導體技術"
+                        ],
+                        "經費來源與規模": "台積電提供經費約 9,000 萬元(近三年)"
+                    },
+                    {
+                        "title": "低成本高效率矽基薄膜太陽能電池",
+                        "技術突破": [
+                            "首創高密度電漿製作高效率非晶矽太陽能電池",
+                            "單接面非晶矽效率達 9.6%,具世界級水準"
+                        ],
+                        "延伸應用與合作": [
+                            {
+                                "合作對象": "Monolithic Semiconductor Inc.",
+                                "內容": "合作開發可拉伸式矽晶太陽能電池",
+                                "經費補助": "440 萬元"
+                            },
+                            {
+                                "合作對象": "科冠能源科技股份有限公司",
+                                "內容": "合作開發矽碳太陽能電池",
+                                "經費補助": "100 萬元"
+                            },
+                            {
+                                "合作對象": "勝連公司",
+                                "內容": "合作開發 X 光感測器 PIN 元件",
+                                "經費補助": "100 萬元"
+                            },
+                            {
+                                "合作對象": "茂迪公司",
+                                "內容": "合作開發大尺寸超薄異質結構矽晶太陽能電池",
+                                "經費補助": "150 萬元"
+                            }
+                        ],
+                        "總經費": "合計 790 萬元"
+                    },
+                    {
+                        "title": "無毒無鎘綠色環保 CIGS 薄膜太陽能電池",
+                        "核心技術": [
+                            "無毒無鎘 CIGS 薄膜太陽能電池",
+                            "綠色環保、低毒性製程"
+                        ],
+                        "合作項目與夥伴": [
+                            {
+                                "合作對象": "勝連光電",
+                                "內容": "CIGS 相關技術產學合作",
+                                "年度經費": "180 萬元"
+                            },
+                            {
+                                "合作對象": "設備商純化、矽碳",
+                                "內容": "共同研發大面積無毒 CuInSe₂ 太陽能電池"
+                            }
+                        ]
+                    }
+                ]
             },
-            {
-                "authors": "Wani, S-S, Kuo, Y-R, Kimbulapitiya, K M M D K, ... ,",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", ... . ",
-                "title": "Improved metal–semiconductor interface in monolayer (1L)-MoS₂ via thermally-driven Ag filaments as atomic scale edge contacts triggered by selective annealing process using long wavelength (1064 nm) pulsed laser",
-                "journal": "ACS Applied Materials & Interfaces",
-                "year": "2025",
-                "volume": "17",
-                "number": "15",
-                "pages": "23209-23221",
-                "doi": "10.1021/acsami.4c20612",
-                "url": "https://pubs.acs.org/doi/10.1021/acsami.4c20612"
-            },
-            {
-                "authors": "Pan, Y-M, Chiu, H-Y, Lin, N-C, ... ,",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", ... . ",
-                "title": "Continuous single-crystal germanium films using elevated-laser-liquid-phase-epitaxy technique for monolithic 3D integration",
-                "journal": "Japanese Journal of Applied Physics",
-                "year": "2025",
-                "volume": "64",
-                "number": "4",
-                "pages": "04SP56",
-                "doi": "10.35848/1347-4065/adc9b8",
-                "url": "https://iopscience.iop.org/article/10.35848/1347-4065/adc9b8/meta"
-            },
-            {
-                "authors": "Hsieh, T-Y, Hsieh, P-Y, Yang, C-C, ",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", Shieh, J-M, Yeh, W-K, Wu, M-C. ",
-                "title": "Correction: Single-Grain Gate-All-Around Si Nanowire FET Using Low-Thermal-Budget Processes for Monolithic Three-Dimensional Integrated Circuits",
-                "journal": "Micromachines",
-                "year": "2025",
-                "volume": "16",
-                "number": "5",
-                "pages": "537",
-                "doi": "10.3390/mi16050537",
-                "url": "https://www.mdpi.com/2072-666X/16/5/537"
-            }
-        ],
-        "會議論文2025": [
-            {
-                "authors": "Pan, Y-M, Chiu, H-Y, Lin, N-C, ... ,",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", ... . ",
-                "title": "Capping Layers for Enhanced Crystallinity of Single-Crystal Germanium on Insulator in Monolithic 3D ICs",
-                "booktitle": "2025 IEEE 75th Electronic Components and Technology Conference (ECTC)",
-                "address": "Dallas, TX, USA",
-                "year": "2025",
-                "pages": "1795-1799",
-                "doi": "10.1109/ECTC51687.2025.00305",
-                "url": "https://ieeexplore.ieee.org/document/11038176"
-            },
-            {
-                "authors": "Chen, Y-C, Lo, C-H, Liu, M-J, ... ,",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", ... . ",
-                "title": "Simulation-Based Process Optimization for Maximizing Device Area and Integration Efficiency in Elevated-Epitaxy Technique for Monolithic 3D ICs",
-                "booktitle": "2025 IEEE International Interconnect Technology Conference (IITC)",
-                "address": "Busan, Korea, Republic of",
-                "year": "2025",
-                "pages": "1-3",
-                "doi": "10.1109/IITC66087.2025.11075365",
-                "url": "https://ieeexplore.ieee.org/document/11075365"
-            },
-            {
-                "authors": "Chen, S-K, Huang, C-H, Lin, C-T, ",
-                "highlightedAuthor": "Shen, C-H",
-                "trailingAuthors": ", Wu, Y-T. ",
-                "title": "Impact of High-k Passivation Layers on the Electrical Stability of p-GaN Gate HEMTs",
-                "booktitle": "2025 International VLSI Symposium on Technology, Systems and Applications (VLSI TSA)",
-                "address": "Hsinchu, Taiwan",
-                "year": "2025",
-                "pages": "1-2",
-                "doi": "10.1109/VLSITSA64674.2025.11047203",
-                "url": "https://ieeexplore.ieee.org/document/11047203"
-            }
-        ]
-      }
-    };
+            "期刊論文2025": [
+                {
+                    "authors": "Lo, C-H, Chang, Y-C, ... ,",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ". ",
+                    "title": "Enhanced crystallinity of p-type 2D tellurium thin films by pulsed laser annealing process and its applications on high-performance photodetectors and high-sensitivity gas sensors",
+                    "journal": "Advanced Functional Materials",
+                    "year": "2025",
+                    "doi": "10.1002/adfm.202516546",
+                    "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202516546"
+                },
+                {
+                    "authors": "Lin, C-Y, Chen, B-C, Liu, Y-C, ... ,",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", ... . ",
+                    "title": "Integration of freestanding hafnium zirconium oxide membranes into two-dimensional transistors as a high-κ ferroelectric dielectric",
+                    "journal": "Nature Electronics",
+                    "year": "2025",
+                    "volume": "8",
+                    "number": "7",
+                    "pages": "560-570",
+                    "doi": "10.1038/s41928-025-01398-y",
+                    "url": "https://www.nature.com/articles/s41928-025-01398-y"
+                },
+                {
+                    "authors": "Wani, S-S, Kuo, Y-R, Kimbulapitiya, K M M D K, ... ,",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", ... . ",
+                    "title": "Improved metal–semiconductor interface in monolayer (1L)-MoS₂ via thermally-driven Ag filaments as atomic scale edge contacts triggered by selective annealing process using long wavelength (1064 nm) pulsed laser",
+                    "journal": "ACS Applied Materials & Interfaces",
+                    "year": "2025",
+                    "volume": "17",
+                    "number": "15",
+                    "pages": "23209-23221",
+                    "doi": "10.1021/acsami.4c20612",
+                    "url": "https://pubs.acs.org/doi/10.1021/acsami.4c20612"
+                },
+                {
+                    "authors": "Pan, Y-M, Chiu, H-Y, Lin, N-C, ... ,",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", ... . ",
+                    "title": "Continuous single-crystal germanium films using elevated-laser-liquid-phase-epitaxy technique for monolithic 3D integration",
+                    "journal": "Japanese Journal of Applied Physics",
+                    "year": "2025",
+                    "volume": "64",
+                    "number": "4",
+                    "pages": "04SP56",
+                    "doi": "10.35848/1347-4065/adc9b8",
+                    "url": "https://iopscience.iop.org/article/10.35848/1347-4065/adc9b8/meta"
+                },
+                {
+                    "authors": "Hsieh, T-Y, Hsieh, P-Y, Yang, C-C, ",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", Shieh, J-M, Yeh, W-K, Wu, M-C. ",
+                    "title": "Correction: Single-Grain Gate-All-Around Si Nanowire FET Using Low-Thermal-Budget Processes for Monolithic Three-Dimensional Integrated Circuits",
+                    "journal": "Micromachines",
+                    "year": "2025",
+                    "volume": "16",
+                    "number": "5",
+                    "pages": "537",
+                    "doi": "10.3390/mi16050537",
+                    "url": "https://www.mdpi.com/2072-666X/16/5/537"
+                }
+            ],
+            "會議論文2025": [
+                {
+                    "authors": "Pan, Y-M, Chiu, H-Y, Lin, N-C, ... ,",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", ... . ",
+                    "title": "Capping Layers for Enhanced Crystallinity of Single-Crystal Germanium on Insulator in Monolithic 3D ICs",
+                    "booktitle": "2025 IEEE 75th Electronic Components and Technology Conference (ECTC)",
+                    "address": "Dallas, TX, USA",
+                    "year": "2025",
+                    "pages": "1795-1799",
+                    "doi": "10.1109/ECTC51687.2025.00305",
+                    "url": "https://ieeexplore.ieee.org/document/11038176"
+                },
+                {
+                    "authors": "Chen, Y-C, Lo, C-H, Liu, M-J, ... ,",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", ... . ",
+                    "title": "Simulation-Based Process Optimization for Maximizing Device Area and Integration Efficiency in Elevated-Epitaxy Technique for Monolithic 3D ICs",
+                    "booktitle": "2025 IEEE International Interconnect Technology Conference (IITC)",
+                    "address": "Busan, Korea, Republic of",
+                    "year": "2025",
+                    "pages": "1-3",
+                    "doi": "10.1109/IITC66087.2025.11075365",
+                    "url": "https://ieeexplore.ieee.org/document/11075365"
+                },
+                {
+                    "authors": "Chen, S-K, Huang, C-H, Lin, C-T, ",
+                    "highlightedAuthor": "Shen, C-H",
+                    "trailingAuthors": ", Wu, Y-T. ",
+                    "title": "Impact of High-k Passivation Layers on the Electrical Stability of p-GaN Gate HEMTs",
+                    "booktitle": "2025 International VLSI Symposium on Technology, Systems and Applications (VLSI TSA)",
+                    "address": "Hsinchu, Taiwan",
+                    "year": "2025",
+                    "pages": "1-2",
+                    "doi": "10.1109/VLSITSA64674.2025.11047203",
+                    "url": "https://ieeexplore.ieee.org/document/11047203"
+                }
+            ],
+            "專利": [
+                {
+                    "title": "Flexible substrate structure, flexible transistor and method for fabricating the same",
+                    "patentNumber": "10600915",
+                    "assignee": "National Applied Research Laboratories",
+                    "inventors": [
+                        "Wen-Hsien Huang",
+                        "Jia-Min Shieh",
+                        "Chang-Hong Shen"
+                    ],
+                    "url": "https://patents.justia.com/patent/10600915"
+                },
+                {
+                    "title": "Chip with light energy harvester",
+                    "patentNumber": "9905547",
+                    "assignee": "National Applied Research Laboratories",
+                    "inventors": [
+                        "Chang-Hong Shen",
+                        "Jia-Min Shieh",
+                        "Wen-Hsien Huang",
+                        "Tsung-Ta Wu",
+                        "Chih-Chao Yang",
+                        "Tung-Ying Hsieh"
+                    ],
+                    "url": "https://patents.justia.com/patent/9905547"
+                }
+            ]
+        }
+    }
 
     const createCardTitle = (title) => `<h2 class="text-xl md:text-2xl font-bold text-blue-800 dark:text-blue-300 mb-5 pb-2 border-b border-blue-200 dark:border-blue-700">${title}</h2>`;
 
@@ -502,9 +527,10 @@
         renderAwards(data.主要獲獎與榮譽);
         renderInnovations(data.代表性技術創新與突破);
         renderIndustry(data.近五年協助產業發展績效);
-        // 新增論文區塊渲染呼叫
+
         if (data.期刊論文2025) renderJournalPublications(data.期刊論文2025);
         if (data.會議論文2025) renderConferencePublications(data.會議論文2025);
+        if (data.專利) renderPatents(data.專利);
 
         setupModal();
         setupDarkMode();
@@ -757,6 +783,39 @@
         `;
     }
 
+    function formatPatent(item) {
+        const inventorsHtml = item.inventors
+            .map(name =>
+                name === "Chang-Hong Shen"
+                    ? `<span class="color-accent color-accent-foreground">${name}</span>`
+                    : name
+            )
+            .join(", ");
+
+        return `
+            <li class="p-3 border-l-4 border-blue-100 dark:border-blue-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors rounded-r-lg">
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-1">
+                    專利名稱: <strong>${item.title}</strong><br>
+                    <span class="text-gray-600 dark:text-gray-400">發明人:</span> ${inventorsHtml}<br>
+                    <span class="text-gray-600 dark:text-gray-400">受讓人:</span> ${item.assignee}<br>
+                    <span class="text-gray-600 dark:text-gray-400">專利號:</span> ${item.patentNumber}
+                </p>
+                <a href="${item.url}" data-url="${item.url}"
+                   class="preview-link text-xs text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 hover:underline inline-flex items-center group transition-colors">
+                   查看專利 ${createIcon('link')}
+                </a>
+            </li>
+        `;
+    }
+
+    function renderPatents(patents) {
+        document.getElementById('patent-section').innerHTML = `
+            ${createCardTitle('台灣、美國專利')}
+            <ol class="list-decimal list-outside pl-5 space-y-4">
+                ${patents.map(formatPatent).join('')}
+            </ol>
+        `;
+    }
 
     function setupModal() {
         const modal = document.getElementById('previewModal');
