@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沈昌宏教授 個人資料</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script>
+    document.documentElement.classList.remove('dark');
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    // 活潑、鮮豔、少女風的配色定義 (使用 Tailwind 顏色命名規則，但替換為鮮艷的值)
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    'primary-bg': {
+                        DEFAULT: '#fef3f6', // Light Pink/White background
+                        dark: '#2c0c4a',  // Deep Violet dark mode background
+                    },
+                    'secondary-bg': {
+                        DEFAULT: '#ffffff',
+                        dark: '#3e1564', // Darker Violet cards
+                    },
+                    'accent-main': {
+                        DEFAULT: '#ff69b4', // Hot Pink for highlights/titles
+                        dark: '#ff99cc', // Lighter Hot Pink for contrast
+                    },
+                    'accent-secondary': {
+                        DEFAULT: '#8a2be2', // Blue Violet for text/icons
+                        dark: '#d8bfd8', // Thistle
+                    },
+                    'text-primary': {
+                        DEFAULT: '#4a0e4b', // Dark Plum/Violet text
+                        dark: '#f8c2ff', // Light Pink/Purple text
+                    },
+                    'text-secondary': {
+                        DEFAULT: '#7b68ee', // Medium Slate Blue for secondary text
+                        dark: '#d8bfd8',
+                    },
+                    'border-light': {
+                        DEFAULT: '#ffd1dc', // Pink Border
+                        dark: '#582b7c', // Dark Violet Border
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    body {
+        font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    }
+
+    /* 活潑主題下的強調色定義 (用於教授姓名) */
+    .color-accent-foreground {
+        color: var(--tw-colors-text-primary-DEFAULT); /* 使用主要的深色作為前景 */
+    }
+    .dark .color-accent-foreground {
+        color: var(--tw-colors-accent-main-dark); /* 深色模式使用亮粉色 */
+    }
+    .color-accent {
+        background-color: var(--tw-colors-accent-main-DEFAULT); /* 淺色模式使用熱粉色背景 */
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+    .dark .color-accent {
+        background-color: var(--tw-colors-accent-secondary-dark); /* 深色模式使用淡紫色背景 */
+    }
+
+
+    #previewModal, #modalOverlay {
+        transition: opacity 0.3s ease-in-out;
+    }
+    #previewModal.hidden, #modalOverlay.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    #previewModal.visible, #modalOverlay.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    #previewModal.visible {
+        transform: scale(1);
+    }
+    #previewModal.hidden {
+         transform: scale(0.95);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+</head>
+<body class="bg-primary-bg text-text-primary dark:bg-primary-bg-dark dark:text-text-primary-dark transition-colors duration-300">
+
+<div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+    <header id="header-section" class="relative mb-8 p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark">
+        <h1 class="text-3xl md:text-4xl font-bold text-accent-main dark:text-accent-main-dark mb-2">沈昌宏 教授 ✨</h1>
+        <p class="text-lg md:text-xl text-text-secondary dark:text-text-secondary-dark">國立清華大學 半導體研究學院 專任教授</p>
+        <button id="theme-toggle" type="button" class="absolute top-6 right-6 p-2 rounded-full text-text-secondary dark:text-text-secondary-dark hover:bg-border-light dark:hover:bg-582b7c focus:outline-none focus:ring-2 focus:ring-accent-main dark:focus:ring-accent-main-dark">
+            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-1.61 4.95l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zm-12.28-2.121l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="md:col-span-1 space-y-6">
+        <div class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark flex flex-col items-center">
+            <img src="image/head.jpg"
+                 alt="沈昌宏教授"
+                 class="w-52 h-60 rounded-2xl object-cover border-4 border-accent-main dark:border-accent-main-dark shadow-md mb-4">
+            <h3 class="text-xl font-bold text-text-primary dark:text-text-primary-dark">沈昌宏 教授 💖</h3>
+            <p class="text-sm text-text-secondary dark:text-text-secondary-dark text-center mt-1">半導體研究學院</p>
+        </div>
+            <div id="basic-info-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="education-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="awards-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+        </div>
+
+        <div class="md:col-span-2 space-y-6">
+            <div id="profile-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="experience-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="research-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="innovation-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="industry-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <!-- 新增論文區塊容器 -->
+            <div id="journal-2025-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+            <div id="conference-2025-section" class="p-6 bg-secondary-bg rounded-xl shadow-lg dark:bg-secondary-bg-dark"></div>
+        </div>
+    </main>
+</div>
+
+<div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<div id="previewModal" class="fixed inset-0 flex items-center justify-center p-4 z-50 hidden">
+    <div class="w-full max-w-4xl h-[85vh] bg-secondary-bg rounded-xl shadow-2xl flex flex-col overflow-hidden dark:bg-secondary-bg-dark">
+        <div class="flex items-center justify-between p-4 border-b bg-primary-bg rounded-t-xl dark:bg-primary-bg-dark dark:border-border-light-dark">
+            <div class="flex items-center min-w-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-text-secondary mr-2 shrink-0 dark:text-text-secondary-dark">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                </svg>
+                <span id="modal-url" class="text-sm text-text-primary truncate font-mono dark:text-text-primary-dark"></span>
+            </div>
+            <button id="closeModal" class="text-text-secondary hover:text-accent-main transition-colors dark:text-text-secondary-dark dark:hover:text-accent-main-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex-1 bg-gray-200 dark:bg-gray-900">
+            <iframe id="preview-iframe" src="about:blank" class="w-full h-full border-0" sandbox="allow-scripts allow-same-origin"></iframe>
+        </div>
+    </div>
+</div>
+
+
+<script type="module">
+    const professorData = {
+      "教授": {
+        "姓名": "沈昌宏",
+        "基本資訊": {
+          "職稱": "國立清華大學 半導體研究學院 專任教授",
+          "聯絡電話": "03-5715131 分機 35927",
+          "辦公室": "國立清華大學第三綜合大樓四樓C13室",
+          "E-Mail": "chshen@mx.nthu.edu.tw",
+          "研究與技術專長": [
+            "二維材料電晶體技術",
+            "化合物半導體磊晶及元件技術",
+            "積層型三維積體電路技術"
+          ]
+        },
+        "主要學歷": [
+          {
+            "畢業學校": "國立清華大學",
+            "國別": "中華民國",
+            "科系所": "物理研究所",
+            "學位": "博士",
+            "起訖年月": "2002/09 - 2006/11"
+          },
+          {
+            "畢業學校": "國立清華大學",
+            "國別": "中華民國",
+            "科系所": "物理研究所",
+            "學位": "碩士",
+            "起訖年月": "2000/09 - 2002/09"
+          },
+          {
+            "畢業學校": "國立中山大學",
+            "國別": "中華民國",
+            "科系所": "物理系",
+            "學位": "學士",
+            "起訖年月": "1996/06 - 2000/09"
+          }
+        ],
+        "經歷": [
+          {
+            "服務機關": "清華大學",
+            "部門": "半導體研究學院",
+            "職稱": "教授",
+            "起訖年月": "2025/01 - 至今"
+          },
+          {
+            "服務機關": "台灣半導體研究中心",
+            "部門": "主任室",
+            "職稱": "副主任",
+            "起訖年月": "2022/02 - 2025/01"
+          },
+          {
+            "服務機關": "台灣半導體研究中心",
+            "部門": "企劃推廣組",
+            "職稱": "研究員兼組長",
+            "起訖年月": "2019/01 - 2022/01"
+          },
+          {
+            "服務機關": "國家奈米元件實驗室",
+            "部門": "企劃推廣組",
+            "職稱": "研究員兼組長",
+            "起訖年月": "2018/09 - 2018/12"
+          },
+          {
+            "服務機關": "國家奈米元件實驗室",
+            "部門": "前瞻元件組",
+            "職稱": "研究員兼組長",
+            "起訖年月": "2014/08 - 2018/08"
+          },
+          {
+            "服務機關": "國家奈米元件實驗室",
+            "部門": "前瞻元件組",
+            "職稱": "研究員兼副組長",
+            "起訖年月": "2014/01 - 2014/07"
+          },
+          {
+            "服務機關": "國家奈米元件實驗室",
+            "部門": "前瞻元件組",
+            "職稱": "研究員",
+            "起訖年月": "2014/01 起"
+          },
+          {
+            "服務機關": "國家奈米元件實驗室",
+            "部門": "前瞻元件組;奈米能源與光電元件組",
+            "職稱": "副研究員兼副組長",
+            "起訖年月": "2013/01 - 2013/12"
+          },
+          {
+            "服務機關": "國家奈米元件實驗室",
+            "部門": "奈米能源與光電元件組",
+            "職稱": "副研究員",
+            "起訖年月": "2009/01 - 2013/12"
+          }
+        ],
+        "個人簡介": {
+          "description": "沈昌宏教授。曾任職於茂矽電子公司、台灣半導體研究中心及國家奈米元件實驗室，參與並領導多項尖端半導體技術開發計畫。研究專長包括單晶片式三維積體電路、先進矽與二維材料電晶體、高功率 GaN 技術等，並曾主持「晶創台灣」等國家級大型專案，具備卓越的團隊經營與科技政策推動經驗。已發表國際期刊論文超過 60 篇，國際會議期刊超過 30 篇，專利超過 10 件。"
+        },
+        "研究領域": [
+          {
+            "name": "Flexible Si/Ge electronics",
+            "link": "https://en.wikipedia.org/wiki/Flexible_electronics"
+          },
+          {
+            "name": "2D materials-based FET",
+            "link": "https://en.wikipedia.org/wiki/Field-effect_transistor#2D_materials"
+          },
+          {
+            "name": "GaN high frequency/power devices",
+            "link": "https://en.wikipedia.org/wiki/Gallium_nitride#Applications"
+          },
+          {
+            "name": "Monolithic 3D ICs",
+            "link": "https://en.wikipedia.org/wiki/3D_integrated_circuit#Monolithic_3D_ICs"
+          }
+        ],
+        "主要獲獎與榮譽": [
+          "2010、2013、2014、2020 國家實驗研究院傑出科技貢獻獎",
+          "2010 CLEO 大會邀請演講",
+          "2013 IEDM 精選宣傳論文",
+          "2015 IEDM Highlight 論文",
+          "IEDM 2018, 2019 Committee & Section Chair",
+          "2020 Symposium on VLSI Technology: Short Course 講師",
+          "IEDMS2020 邀請講者與主持人"
+        ],
+        "代表性技術創新與突破": [
+          {
+            "title": "單晶片式三維積體電路 (Monolithic 3DIC)",
+            "details": [
+              "為延續摩爾定律之關鍵技術,突破傳統 TSV 限制",
+              "全世界最低製程溫度(< 400°C)與最高整合密度",
+              "IEDM 2015-2019 發表數最多團隊(共 9 篇,4 篇通訊作者)",
+              "可實現記憶體內運算(Computing-in-Memory)技術"
+            ]
+          },
+          {
+            "title": "二維材料電晶體技術於單晶片式 3DIC",
+            "details": [
+              "研發異質整合製程、雙層邏輯閘設計及 SRAM",
+              "開發超低熱預算金屬導線 (<200°C) 製程"
+            ]
+          },
+          {
+            "title": "高頻/高功率 GaN 元件技術",
+            "details": [
+              "用於 5G/6G 通訊,推動 GaN/SiC 異質磊晶",
+              "開發次太赫茲 Sub-THz MMIC 功率放大器 (fmax > 600 GHz)"
+            ]
+          },
+          {
+            "title": "第三代薄膜太陽能電池",
+            "details": [
+              "包含 Si 薄膜、無鎘 CIGS 太陽能電池、高效異質結構太陽能電池",
+              "發表於 IEDM、CLEO、APL,取得多項專利"
+            ]
+          }
+        ],
+        "近五年協助產業發展績效": {
+          "整體貢獻面向": [
+            "技術移轉",
+            "著作授權",
+            "產學合作",
+            "協助產業發展",
+            "實作研究上之成果與貢獻",
+            "產業規範/標準之建立",
+            "國防與太空科技之研究與貢獻"
+          ],
+          "具體計畫與成果": [
+            {
+              "title": "台積電先進元件製程合作計畫",
+              "合作對象": "台積電 CR and path finding 團隊",
+              "技術內容": [
+                "先進電晶體技術開發",
+                "記憶體元件技術開發"
+              ],
+              "TSRI角色": [
+                "提供製程平台協助 TSMC 研發",
+                "直接參與技術研發"
+              ],
+              "成果": [
+                "協助開發具量產價值之次世代半導體技術"
+              ],
+              "經費來源與規模": "台積電提供經費約 9,000 萬元(近三年)"
+            },
+            {
+              "title": "低成本高效率矽基薄膜太陽能電池",
+              "技術突破": [
+                "首創高密度電漿製作高效率非晶矽太陽能電池",
+                "單接面非晶矽效率達 9.6%,具世界級水準"
+              ],
+              "延伸應用與合作": [
+                {
+                  "合作對象": "Monolithic Semiconductor Inc.",
+                  "內容": "合作開發可拉伸式矽晶太陽能電池",
+                  "經費補助": "440 萬元"
+                },
+                {
+                  "合作對象": "科冠能源科技股份有限公司",
+                  "內容": "合作開發矽碳太陽能電池",
+                  "經費補助": "100 萬元"
+                },
+                {
+                  "合作對象": "勝連公司",
+                  "內容": "合作開發 X 光感測器 PIN 元件",
+                  "經費補助": "100 萬元"
+                },
+                {
+                  "合作對象": "茂迪公司",
+                  "內容": "合作開發大尺寸超薄異質結構矽晶太陽能電池",
+                  "經費補助": "150 萬元"
+                }
+              ],
+              "總經費": "合計 790 萬元"
+            },
+            {
+              "title": "無毒無鎘綠色環保 CIGS 薄膜太陽能電池",
+              "核心技術": [
+                "無毒無鎘 CIGS 薄膜太陽能電池",
+                "綠色環保、低毒性製程"
+              ],
+              "合作項目與夥伴": [
+                {
+                  "合作對象": "勝連光電",
+                  "內容": "CIGS 相關技術產學合作",
+                  "年度經費": "180 萬元"
+                },
+                {
+                  "合作對象": "設備商純化、矽碳",
+                  "內容": "共同研發大面積無毒 CuInSe₂ 太陽能電池"
+                }
+              ]
+            }
+          ]
+        },
+        "期刊論文2025": [
+            {
+                "authors": "Lo, C-H, Chang, Y-C, ... ,",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ". ",
+                "title": "Enhanced crystallinity of p-type 2D tellurium thin films by pulsed laser annealing process and its applications on high-performance photodetectors and high-sensitivity gas sensors",
+                "journal": "Advanced Functional Materials",
+                "journalAbbrev": "Adv Funct Mater",
+                "year": "2025",
+                "doi": "10.1002/adfm.202516546",
+                "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202516546"
+            },
+            {
+                "authors": "Lin, C-Y, Chen, B-C, Liu, Y-C, ... ,",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", ... . ",
+                "title": "Integration of freestanding hafnium zirconium oxide membranes into two-dimensional transistors as a high-κ ferroelectric dielectric",
+                "journal": "Nature Electronics",
+                "journalAbbrev": "Nat Electron",
+                "year": "2025",
+                "volume": "8",
+                "number": "7",
+                "pages": "560-570",
+                "doi": "10.1038/s41928-025-01398-y",
+                "url": "https://www.nature.com/articles/s41928-025-01398-y"
+            },
+            {
+                "authors": "Wani, S-S, Kuo, Y-R, Kimbulapitiya, K M M D K, ... ,",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", ... . ",
+                "title": "Improved metal–semiconductor interface in monolayer (1L)-MoS₂ via thermally-driven Ag filaments as atomic scale edge contacts triggered by selective annealing process using long wavelength (1064 nm) pulsed laser",
+                "journal": "ACS Applied Materials & Interfaces",
+                "journalAbbrev": "ACS Appl Mater Interfaces",
+                "year": "2025",
+                "volume": "17",
+                "number": "15",
+                "pages": "23209-23221",
+                "doi": "10.1021/acsami.4c20612",
+                "url": "https://pubs.acs.org/doi/10.1021/acsami.4c20612"
+            },
+            {
+                "authors": "Pan, Y-M, Chiu, H-Y, Lin, N-C, ... ,",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", ... . ",
+                "title": "Continuous single-crystal germanium films using elevated-laser-liquid-phase-epitaxy technique for monolithic 3D integration",
+                "journal": "Japanese Journal of Applied Physics",
+                "journalAbbrev": "Jpn J Appl Phys",
+                "year": "2025",
+                "volume": "64",
+                "number": "4",
+                "pages": "04SP56",
+                "doi": "10.35848/1347-4065/adc9b8",
+                "url": "https://iopscience.iop.org/article/10.35848/1347-4065/adc9b8/meta"
+            },
+            {
+                "authors": "Hsieh, T-Y, Hsieh, P-Y, Yang, C-C, ",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", Shieh, J-M, Yeh, W-K, Wu, M-C. ",
+                "title": "Correction: Single-Grain Gate-All-Around Si Nanowire FET Using Low-Thermal-Budget Processes for Monolithic Three-Dimensional Integrated Circuits",
+                "journal": "Micromachines",
+                "journalAbbrev": "Micromachines",
+                "year": "2025",
+                "volume": "16",
+                "number": "5",
+                "pages": "537",
+                "doi": "10.3390/mi16050537",
+                "url": "https://www.mdpi.com/2072-666X/16/5/537"
+            }
+        ],
+        "會議論文2025": [
+            {
+                "authors": "Pan, Y-M, Chiu, H-Y, Lin, N-C, ... ,",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", ... . ",
+                "title": "Capping Layers for Enhanced Crystallinity of Single-Crystal Germanium on Insulator in Monolithic 3D ICs",
+                "booktitle": "2025 IEEE 75th Electronic Components and Technology Conference (ECTC)",
+                "address": "Dallas, TX, USA",
+                "year": "2025",
+                "pages": "1795-1799",
+                "doi": "10.1109/ECTC51687.2025.00305",
+                "url": "https://ieeexplore.ieee.org/document/11038176"
+            },
+            {
+                "authors": "Chen, Y-C, Lo, C-H, Liu, M-J, ... ,",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", ... . ",
+                "title": "Simulation-Based Process Optimization for Maximizing Device Area and Integration Efficiency in Elevated-Epitaxy Technique for Monolithic 3D ICs",
+                "booktitle": "2025 IEEE International Interconnect Technology Conference (IITC)",
+                "address": "Busan, Korea, Republic of",
+                "year": "2025",
+                "pages": "1-3",
+                "doi": "10.1109/IITC66087.2025.11075365",
+                "url": "https://ieeexplore.ieee.org/document/11075365"
+            },
+            {
+                "authors": "Chen, S-K, Huang, C-H, Lin, C-T, ",
+                "highlightedAuthor": "Shen, C-H",
+                "trailingAuthors": ", Wu, Y-T. ",
+                "title": "Impact of High-k Passivation Layers on the Electrical Stability of p-GaN Gate HEMTs",
+                "booktitle": "2025 International VLSI Symposium on Technology, Systems and Applications (VLSI TSA)",
+                "address": "Hsinchu, Taiwan",
+                "year": "2025",
+                "pages": "1-2",
+                "doi": "10.1109/VLSITSA64674.2025.11047203",
+                "url": "https://ieeexplore.ieee.org/document/11047203"
+            }
+        ]
+      }
+    };
+
+    const createCardTitle = (title, emoji) => `<h2 class="text-xl md:text-2xl font-bold text-accent-main dark:text-accent-main-dark mb-5 pb-2 border-b-2 border-border-light dark:border-border-light-dark">${title} ${emoji}</h2>`;
+
+    const createIcon = (iconName) => {
+        // Icons' color changed to accent-secondary
+        const icons = {
+            'phone': `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 shrink-0 text-accent-secondary dark:text-accent-secondary-dark"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.21-1.007-.568-1.362l-3.908-3.908c-.358-.358-.85-.568-1.362-.568H16.5a1.125 1.125 0 0 1-1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125H18a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 18 4.5h-1.5m-15 0a2.25 2.25 0 0 1 2.25-2.25h1.5A2.25 2.25 0 0 1 6 6.75v1.5a2.25 2.25 0 0 1-2.25 2.25H2.25m15 0A2.25 2.25 0 0 1 19.5 9v1.5a2.25 2.25 0 0 1-2.25 2.25H15M2.25 12h1.5a2.25 2.25 0 0 1 2.25 2.25v1.5a2.25 2.25 0 0 1-2.25 2.25H2.25" /></svg>`,
+            'email': `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 shrink-0 text-accent-secondary dark:text-accent-secondary-dark"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.625a2.25 2.25 0 0 1-2.86 0l-7.5-4.625A2.25 2.25 0 0 1 2.25 6.993V6.75" /></svg>`,
+            'office': `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 shrink-0 text-accent-secondary dark:text-accent-secondary-dark"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6M9 12h6m-6 5.25h6M5.25 9h13.5" /></svg>`,
+            'expertise': `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 shrink-0 text-accent-secondary dark:text-accent-secondary-dark"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.25 12l-2.846-.813a4.5 4.5 0 0 0-3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09L9 18.75l.813-2.846a4.5 4.5 0 0 0 3.09-3.09L18.25 12Z" /></svg>`,
+            'link': `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1 inline-block text-accent-main opacity-60 group-hover:opacity-100 dark:text-accent-main-dark"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" /></svg>`
+        };
+        return icons[iconName] || '';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const data = professorData.教授;
+        if (!data) {
+            document.body.innerHTML = '<h1 class="text-red-500 text-center p-10">無法載入資料</h1>';
+            return;
+        }
+
+        // renderHeader(data); // Header is now static
+        renderBasicInfo(data.基本資訊);
+        renderProfile(data.個人簡介);
+        renderEducation(data.主要學歷);
+        renderExperience(data.經歷);
+        renderResearch(data.研究領域);
+        renderAwards(data.主要獲獎與榮譽);
+        renderInnovations(data.代表性技術創新與突破);
+        renderIndustry(data.近五年協助產業發展績效);
+        // 新增論文區塊渲染呼叫
+        if (data.期刊論文2025) renderJournalPublications(data.期刊論文2025);
+        if (data.會議論文2025) renderConferencePublications(data.會議論文2025);
+
+        setupModal();
+        setupDarkMode();
+    });
+
+    // function renderHeader(data) { ... } // Removed as it is static now
+
+    function renderBasicInfo(info) {
+        document.getElementById('basic-info-section').innerHTML = `
+            ${createCardTitle('基本資訊', '📞')}
+            <div class="space-y-4 text-sm md:text-base">
+                <div class="flex items-start gap-3 text-text-primary dark:text-text-primary-dark">
+                    ${createIcon('phone')}
+                    <span>${info.聯絡電話}</span>
+                </div>
+                <div class="flex items-start gap-3 text-text-primary dark:text-text-primary-dark">
+                    ${createIcon('office')}
+                    <span>${info.辦公室}</span>
+                </div>
+                <div class="flex items-start gap-3 text-text-primary dark:text-text-primary-dark">
+                    ${createIcon('email')}
+                    <a href="mailto:${info['E-Mail']}" class="text-accent-main hover:underline break-all dark:text-accent-main-dark dark:hover:text-accent-main">${info['E-Mail']}</a>
+                </div>
+                <div class="flex items-start gap-3 mt-5 pt-4 border-t border-border-light dark:border-border-light-dark">
+                    ${createIcon('expertise')}
+                    <div class="flex-1">
+                        <span class="font-semibold text-text-primary dark:text-text-primary-dark">研究與技術專長 🔬</span>
+                        <ul class="list-disc list-outside pl-5 mt-2 space-y-1 text-text-secondary dark:text-text-secondary-dark">
+                            ${info.研究與技術專長.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function renderProfile(profile) {
+        document.getElementById('profile-section').innerHTML = `
+            ${createCardTitle('個人簡介', '🎀')}
+            <p class="text-base leading-relaxed text-text-primary dark:text-text-primary-dark">${profile.description}</p>
+        `;
+    }
+
+    function renderEducation(edu) {
+        document.getElementById('education-section').innerHTML = `
+            ${createCardTitle('主要學歷', '🎓')}
+            <ul class="space-y-5">
+                ${edu.map(item => `
+                    <li class="border-l-4 border-accent-main dark:border-accent-main-dark pl-4 py-1">
+                        <p class="font-bold text-base text-text-primary dark:text-text-primary-dark">${item.畢業學校}</p>
+                        <p class="text-sm text-text-secondary dark:text-text-secondary-dark">${item.科系所} - ${item.學位}</p>
+                        <p class="text-xs text-text-secondary dark:text-text-secondary-dark mt-1">${item.起訖年月}</p>
+                    </li>
+                `).join('')}
+            </ul>
+        `;
+    }
+
+    function renderExperience(exp) {
+        document.getElementById('experience-section').innerHTML = `
+            ${createCardTitle('經歷', '💼')}
+            <div class="relative pl-5">
+                <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-border-light dark:bg-border-light-dark" style="left: 1.25rem;"></div>
+                <ul class="space-y-6">
+                    ${exp.map(item => `
+                        <li class="relative">
+                            <div class="absolute -left-1.5 top-1.5 w-3 h-3 bg-accent-main dark:bg-accent-main-dark rounded-full border-2 border-secondary-bg dark:border-secondary-bg-dark"></div>
+                            <div class="ml-6">
+                                <p class="font-semibold text-base text-text-primary dark:text-text-primary-dark">${item.職稱}</p>
+                                <p class="text-sm text-text-secondary dark:text-text-secondary-dark">${item.服務機關} - ${item.部門}</p>
+                                <p class="text-xs text-text-secondary dark:text-text-secondary-dark mt-1">${item.起訖年月}</p>
+                            </div>
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
+    function renderResearch(research) {
+        document.getElementById('research-section').innerHTML = `
+            ${createCardTitle('研究領域', '🔬')}
+            <ul class="list-none space-y-2">
+                ${research.map(item => `
+                    <li>
+                        <a href="${item.link}"
+                           data-url="${item.link}"
+                           class="preview-link group text-accent-main hover:text-accent-secondary dark:text-accent-main-dark dark:hover:text-accent-main hover:underline text-base font-medium transition-colors">
+                           ${item.name}
+                           ${createIcon('link')}
+                        </a>
+                    </li>
+                `).join('')}
+            </ul>
+        `;
+    }
+
+    function renderAwards(awards) {
+        document.getElementById('awards-section').innerHTML = `
+            ${createCardTitle('主要獲獎與榮譽', '🏆')}
+            <ul class="list-disc list-outside pl-5 space-y-2 text-text-primary dark:text-text-primary-dark text-sm md:text-base">
+                ${awards.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        `;
+    }
+
+    function renderInnovations(innovations) {
+        document.getElementById('innovation-section').innerHTML = `
+            ${createCardTitle('代表性技術創新與突破', '💡')}
+            <div class="space-y-6">
+                ${innovations.map(item => `
+                    <div class="p-4 bg-primary-bg rounded-lg border border-border-light dark:bg-primary-bg-dark dark:border-border-light-dark">
+                        <h3 class="font-bold text-base text-text-primary dark:text-text-primary-dark mb-2">🌟 ${item.title}</h3>
+                        <ul class="list-disc list-outside pl-5 space-y-1 text-sm text-text-secondary dark:text-text-secondary-dark">
+                            ${item.details.map(detail => `<li>${detail}</li>`).join('')}
+                        </ul>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    function renderIndustry(industry) {
+        document.getElementById('industry-section').innerHTML = `
+            ${createCardTitle('近五年協助產業發展績效', '🤝')}
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-semibold text-lg text-text-primary dark:text-text-primary-dark mb-3">整體貢獻面向</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${industry.整體貢獻面向.map(item => `
+                            <span class="bg-accent-main text-secondary-bg text-xs font-medium px-3 py-1 rounded-full dark:bg-accent-main-dark dark:text-primary-bg-dark">${item}</span>
+                        `).join('')}
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg text-text-primary dark:text-text-primary-dark mb-4 pt-4 border-t border-border-light dark:border-border-light-dark">具體計畫與成果</h4>
+                    <div class="space-y-5">
+                        ${industry.具體計畫與成果.map(plan => `
+                            <div class="p-4 bg-secondary-bg rounded-lg border border-border-light shadow-sm dark:bg-secondary-bg-dark dark:border-border-light-dark">
+                                <h5 class="font-bold text-base text-accent-secondary dark:text-accent-secondary-dark mb-3">🎯 ${plan.title}</h5>
+                                ${plan.合作對象 ? `<p class="text-sm mb-2 text-text-primary dark:text-text-primary-dark"><strong class="font-medium text-text-secondary dark:text-text-secondary-dark">合作對象:</strong> ${plan.合作對象}</p>` : ''}
+                                ${plan.技術突破 ? `<p class="text-sm mb-2 text-text-primary dark:text-text-primary-dark"><strong class="font-medium text-text-secondary dark:text-text-secondary-dark">技術突破:</strong> ${plan.技術突破.join('；')}</p>` : ''}
+                                ${plan.成果 ? `<p class="text-sm mb-2 text-text-primary dark:text-text-primary-dark"><strong class="font-medium text-text-secondary dark:text-text-secondary-dark">成果:</strong> ${plan.成果.join('；')}</p>` : ''}
+                                ${plan.經費來源與規模 ? `<p class="text-sm mb-2 text-text-primary dark:text-text-primary-dark"><strong class="font-medium text-text-secondary dark:text-text-secondary-dark">經費:</strong> ${plan.經費來源與規模}</p>` : ''}
+                                ${plan.總經費 ? `<p class="text-sm mb-2 text-text-primary dark:text-text-primary-dark"><strong class="font-medium text-text-secondary dark:text-text-secondary-dark">總經費:</strong> ${plan.總經費}</p>` : ''}
+
+                                ${plan.延伸應用與合作 ? `
+                                    <div class="mt-3 pt-3 border-t border-border-light dark:border-border-light-dark">
+                                        <h6 class="font-semibold text-sm text-text-primary dark:text-text-primary-dark mb-2">延伸應用與合作:</h6>
+                                        <ul class="list-disc list-outside pl-5 space-y-1 text-sm text-text-secondary dark:text-text-secondary-dark">
+                                            ${plan.延伸應用與合作.map(sub => `<li>${sub.合作對象}: ${sub.內容} (${sub.經費補助})</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                                ${plan.合作項目與夥伴 ? `
+                                    <div class="mt-3 pt-3 border-t border-border-light dark:border-border-light-dark">
+                                        <h6 class="font-semibold text-sm text-text-primary dark:text-text-primary-dark mb-2">合作項目與夥伴:</h6>
+                                        <ul class="list-disc list-outside pl-5 space-y-1 text-sm text-text-secondary dark:text-text-secondary-dark">
+                                            ${plan.合作項目與夥伴.map(sub => `<li>${sub.合作對象}: ${sub.內容} ${sub.年度經費 ? `(${sub.年度經費})` : ''}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // --- 2025 期刊論文渲染函數 ---
+
+    function formatJournalCitation(item) {
+        // Vancouver Style: Authors. Title. Journal Abbrev. Year;Volume(Issue):Pages. DOI/URL.
+        const authorsHtml = `${item.authors}<span class="color-accent color-accent-foreground">${item.highlightedAuthor}</span>${item.trailingAuthors}`;
+        const volNum = (item.volume && item.number) ? `${item.volume}(${item.number})` : (item.volume || item.number || '');
+        const pages = (volNum && item.pages) ? `:${item.pages}` : (item.pages ? item.pages : '');
+
+        // journal name
+        const citationText = `${item.title}. <em class="font-semibold text-accent-secondary dark:text-accent-secondary-dark">${item.journal}</em>. ${item.year}${volNum ? `;${volNum}` : ''}${pages}.`;
+
+        const doi = item.doi ? `<span class="text-xs text-text-secondary dark:text-text-secondary-dark block mt-1">DOI: ${item.doi}</span>` : '';
+        const urlIcon = createIcon('link');
+
+        return `
+            <li class="p-3 border-l-4 border-accent-main/50 dark:border-accent-main-dark/50 hover:bg-primary-bg dark:hover:bg-primary-bg-dark transition-colors rounded-r-lg">
+                <p class="text-sm leading-relaxed text-text-primary dark:text-text-primary-dark mb-1">
+                    ${authorsHtml}
+                    ${citationText}
+                </p>
+                <a href="${item.url}"
+                   data-url="${item.url}"
+                   class="preview-link text-xs text-accent-main hover:text-accent-secondary dark:text-accent-main-dark dark:hover:text-accent-main hover:underline inline-flex items-center group transition-colors">
+                   查看連結 ${urlIcon}
+                </a>
+                ${doi}
+            </li>
+        `;
+    }
+
+    function renderJournalPublications(publications) {
+        document.getElementById('journal-2025-section').innerHTML = `
+            ${createCardTitle('2025 期刊論文', '📚')}
+            <ol class="list-decimal list-outside pl-5 space-y-4 text-text-primary dark:text-text-primary-dark">
+                ${publications.map(formatJournalCitation).join('')}
+            </ol>
+        `;
+    }
+
+    // --- 2025 IEEE 會議論文渲染函數 ---
+
+    function formatConferenceCitation(item) {
+        // Vancouver Style: Authors. Title. In: Booktitle. Address (optional); Year. p. Pages. DOI/URL.
+        const authorsHtml = `${item.authors}<span class="color-accent color-accent-foreground">${item.highlightedAuthor}</span>${item.trailingAuthors}`;
+        const address = item.address ? `. ${item.address}` : '';
+        const pages = item.pages ? `. p. ${item.pages}` : '.';
+
+        const citationText = `${item.title}. In: <em class="font-semibold text-accent-secondary dark:text-accent-secondary-dark">${item.booktitle}</em>${address}; ${item.year}${pages}`;
+
+        const doi = item.doi ? `<span class="text-xs text-text-secondary dark:text-text-secondary-dark block mt-1">DOI: ${item.doi}</span>` : '';
+        const urlIcon = createIcon('link');
+
+        return `
+            <li class="p-3 border-l-4 border-accent-secondary/50 dark:border-accent-secondary-dark/50 hover:bg-primary-bg dark:hover:bg-primary-bg-dark transition-colors rounded-r-lg">
+                <p class="text-sm leading-relaxed text-text-primary dark:text-text-primary-dark mb-1">
+                    ${authorsHtml}
+                    ${citationText}
+                </p>
+                <a href="${item.url}"
+                   data-url="${item.url}"
+                   class="preview-link text-xs text-accent-main hover:text-accent-secondary dark:text-accent-main-dark dark:hover:text-accent-main hover:underline inline-flex items-center group transition-colors">
+                   查看連結 ${urlIcon}
+                </a>
+                ${doi}
+            </li>
+        `;
+    }
+
+    function renderConferencePublications(publications) {
+        document.getElementById('conference-2025-section').innerHTML = `
+            ${createCardTitle('2025 IEEE 會議論文', '⚙️')}
+            <ol class="list-decimal list-outside pl-5 space-y-4 text-text-primary dark:text-text-primary-dark">
+                ${publications.map(formatConferenceCitation).join('')}
+            </ol>
+        `;
+    }
+
+    function setupModal() {
+        const modal = document.getElementById('previewModal');
+        const overlay = document.getElementById('modalOverlay');
+        const closeModalBtn = document.getElementById('closeModal');
+        const iframe = document.getElementById('preview-iframe');
+        const modalUrl = document.getElementById('modal-url');
+
+        const openModal = (url) => {
+            iframe.src = url;
+            modalUrl.textContent = url;
+            modal.classList.remove('hidden');
+            modal.classList.add('visible');
+            overlay.classList.remove('hidden');
+            overlay.classList.add('visible');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('visible');
+            overlay.classList.add('hidden');
+            overlay.classList.remove('visible');
+            iframe.src = 'about:blank';
+            modalUrl.textContent = '';
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        document.body.addEventListener('click', (e) => {
+            const previewLink = e.target.closest('a.preview-link');
+            if (previewLink) {
+                e.preventDefault();
+                const url = previewLink.dataset.url;
+                openModal(url);
+            }
+        });
+    }
+
+    function setupDarkMode() {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // 根據當前主題設定初始圖標狀態
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        } else {
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const isDarkNow = document.documentElement.classList.contains('dark');
+
+            if (isDarkNow) {
+                document.documentElement.classList.remove('dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

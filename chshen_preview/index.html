@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人資料導覽頁 ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+    document.documentElement.classList.remove('dark');
+    // 為了與內容頁保持一致，檢查並設定深色模式
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+    }
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    // 活潑、鮮豔、少女風的配色定義 (與 2025.11.05_2132.html 保持一致)
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    'primary-bg': {
+                        DEFAULT: '#fef3f6', // Light Pink/White background
+                        dark: '#2c0c4a',  // Deep Violet dark mode background
+                    },
+                    'secondary-bg': {
+                        DEFAULT: '#ffffff',
+                        dark: '#3e1564', // Darker Violet cards
+                    },
+                    'accent-main': {
+                        DEFAULT: '#ff69b4', // Hot Pink for highlights/titles/buttons
+                        dark: '#ff99cc', // Lighter Hot Pink
+                    },
+                    'accent-secondary': {
+                        DEFAULT: '#8a2be2', // Blue Violet for text/icons
+                        dark: '#d8bfd8', // Thistle
+                    },
+                    'text-primary': {
+                        DEFAULT: '#4a0e4b', // Dark Plum/Violet text
+                        dark: '#f8c2ff', // Light Pink/Purple text
+                    },
+                    'text-secondary': {
+                        DEFAULT: '#7b68ee', // Medium Slate Blue for secondary text
+                        dark: '#d8bfd8',
+                    },
+                    'border-light': {
+                        DEFAULT: '#ffd1dc', // Pink Border
+                        dark: '#582b7c', // Dark Violet Border
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    body {
+        font-family: 'Inter', 'Noto Sans TC', sans-serif;
+    }
+
+    /* 活潑風格的按鈕過渡效果 */
+    .btn-style {
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    .btn-style:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 10px 15px -3px rgb(255 105 180 / 0.5), 0 4px 6px -4px rgb(255 105 180 / 0.5); /* Pink shadow on hover */
+    }
+    .dark .btn-style:hover {
+        box-shadow: 0 10px 15px -3px rgb(255 153 204 / 0.4), 0 4px 6px -4px rgb(255 153 204 / 0.4); /* Lighter Pink shadow on hover in dark mode */
+    }
+</style>
+</head>
+<body class="bg-primary-bg text-text-primary dark:bg-primary-bg-dark dark:text-text-primary-dark min-h-screen flex items-center justify-center transition-colors duration-300 p-4">
+<div class="w-full max-w-md bg-secondary-bg dark:bg-secondary-bg-dark rounded-3xl shadow-2xl p-8 md:p-10 text-center border-4 border-accent-main dark:border-accent-main-dark">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-accent-main dark:text-accent-main-dark mb-4 tracking-tight">
+        教授資料導覽 💖
+    </h1>
+    <p class="text-lg text-text-secondary dark:text-text-secondary-dark mb-8">
+        請選擇您要查看的個人資料版本。
+    </p>
+
+    <div class="space-y-6">
+        <!-- Link 1: 2025.11.05_2132.html -->
+        <a href="2025.11.05_2132.html" class="btn-style block w-full py-4 px-6 rounded-xl font-bold text-lg
+            bg-accent-main text-secondary-bg dark:bg-accent-main-dark dark:text-primary-bg-dark
+            hover:bg-accent-secondary dark:hover:bg-accent-secondary">
+            🎨 專業版
+        </a>
+
+        <!-- Link 2: 2025.11.05_2145.html -->
+        <a href="2025.11.05_2145.html" class="btn-style block w-full py-4 px-6 rounded-xl font-bold text-lg
+            bg-accent-main text-secondary-bg dark:bg-accent-main-dark dark:text-primary-bg-dark
+            hover:bg-accent-secondary dark:hover:bg-accent-secondary">
+            🖼️ 活潑版
+        </a>
+    </div>
+
+    <div class="mt-8">
+        <button id="theme-toggle-index" type="button" class="inline-flex items-center p-3 rounded-full text-text-secondary dark:text-text-secondary-dark bg-border-light dark:bg-border-light-dark hover:bg-accent-main/50 dark:hover:bg-accent-main-dark/50 transition-colors">
+            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-1.61 4.95l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zm-12.28-2.121l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+        <p class="text-xs text-text-secondary dark:text-text-secondary-dark mt-2">切換深色/淺色模式</p>
+    </div>
+</div>
+
+<script>
+    // 黑暗模式切換邏輯
+    const themeToggleBtn = document.getElementById('theme-toggle-index');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // 初始狀態
+    const updateThemeIcons = () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        } else {
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        }
+    };
+
+    updateThemeIcons();
+
+    themeToggleBtn.addEventListener('click', () => {
+        const isDarkNow = document.documentElement.classList.contains('dark');
+
+        if (isDarkNow) {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+        updateThemeIcons();
+    });
+</script>
+</body>
+</html>
