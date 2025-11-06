@@ -541,7 +541,7 @@
         }
     }
 
-    const createCardTitle = (title, emoji) => `<h2 class="text-xl md:text-2xl font-bold text-accent-main dark:text-accent-main-dark mb-5 pb-2 border-b-2 border-border-light dark:border-border-light-dark">${title} ${emoji}</h2>`;
+    const createCardTitle = (title, emoji) => `<h2 class="text-xl md:text-2xl font-bold text-accent-main dark:text-accent-main-dark mb-5 pb-2 border-b-2 border-border-light dark:border-border-light-dark">${title} ${emoji ? emoji : ""}</h2>`;
 
     const createIcon = (iconName) => {
         // Icons' color changed to accent-secondary
